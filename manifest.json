@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Upwork Job Notifier",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "alarms",
+    "notifications",
+    "storage",
+    "scripting",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "dist/background.js"
+  },
+  "action": {
+    "default_popup": "dist/popup.html"
+  }
+}
