@@ -1,0 +1,46 @@
+{
+  "name": "upworkjob-notifier",
+  "version": "1.0.0",
+  "description": "A browser extension for notifying users about upwork job listings.",
+  "main": "popup.js",
+  "scripts": {
+    "build": "tsc",
+    "build all": "npm run build && cp src/popup.html dist/ && cp src/popup.css dist/",
+    "rebuild all": "rm -rf node_modules && rm -rf dist && npm install && npm run build && cp src/popup.html dist/ && cp src/popup.css dist/",
+    "watch": "tsc --watch",
+    "start": "open /dist/popup.html",
+    "lint": "eslint . --ext .ts",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "keywords": [
+    "browser",
+    "extension",
+    "job notifier",
+    "TypeScript"
+  ],
+  "author": "Joshua Olatunji",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/axios": "^0.9.36",
+    "@types/chrome": "^0.0.275",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "^8.0.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "ts-loader": "^9.2.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0"
+  },
+  "browser": {
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      }
+    },
+    "manifest_version": 3
+  }
+}
