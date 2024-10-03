@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",               // Output compiled JS to the dist folder
+    "sourceMap": true,                // Create source maps for debugging
+    "target": "es6",                  // Use ECMAScript 6 features
+    "module": "commonjs",             // Module system
+    "strict": true,                   // Enable strict type checking
+    "esModuleInterop": true,
+    "lib": ["dom", "es6"],
+    "types": ["chrome"]
+  },
+  "include": ["src/**/*"]
+}
